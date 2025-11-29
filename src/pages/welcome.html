@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Welcome to Blueberry</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800;900&amp;family=Urbanist:wght@400;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .font-urbanist {
+      font-family: 'Urbanist', "Noto Sans", sans-serif;
+    }
+  </style>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#e60a15",
+            "background-light": "#f8f5f6",
+            "background-dark": "#100000",
+          },
+          fontFamily: {
+            "display": ["Manrope"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+  <div class="relative flex min-h-screen w-full flex-col overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center"
+      data-alt="Dark red and black radial gradient for a seductive tech noir atmosphere"
+      style="background-image: radial-gradient(circle at top right, rgba(230, 10, 21, 0.2), transparent 40%), radial-gradient(circle at bottom left, rgba(230, 10, 21, 0.15), transparent 50%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuDTUCRA8lvx3zEtcBOtpzMsmkevaecO6oMu67Znw28cpBTE0r1wmqqJRelCgkzDelxzpGfQkKybYRIPMl5ToCRKzh2QrCbEYtIlVzi8BE5rzyGmtJFgAsNWQXWvAnhqImpiXdJIQM3_uHLGz_-WngzQ6SeqHpWKK8YMRdUYbD-efWql9ht0LldOx67UUfMWotyp-oE1UwPu1ycBV7pDPXZpf_jf3-WVrY_3-fNeCsu4zRXHotkxQ34GMi9GGhk482m761NM35iLW-w'); background-color: #100000;">
+      <div class="absolute inset-0 bg-black/30"></div>
+    </div>
+    <div class="relative flex h-full grow flex-col">
+      <div class="flex flex-1 items-center justify-center p-4 py-16 sm:p-8">
+        <div class="flex w-full max-w-4xl flex-col items-center">
+          <!-- Glassmorphic Card -->
+          <div
+            class="flex w-full flex-col items-center gap-8 rounded-xl border border-white/10 bg-black/30 p-8 text-center text-white shadow-2xl backdrop-blur-xl md:p-16">
+            <div class="flex flex-col items-center gap-4">
+              <h1
+                class="font-urbanist text-4xl font-black uppercase tracking-wider text-white drop-shadow-[0_2px_10px_rgba(230,10,21,0.7)] sm:text-5xl md:text-7xl">
+                Welcome to Blueberry
+              </h1>
+              <h2 class="max-w-xl text-base font-normal leading-normal text-gray-300 sm:text-lg">
+                Indulge your senses. Discover a world of exclusive content curated just for you. The ultimate
+                experience awaits.
+              </h2>
+            </div>
+            <a href="index.html"
+              class="flex min-w-[120px] max-w-xs cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-8 bg-primary text-white text-base font-bold leading-normal tracking-wide shadow-[0_0_20px_rgba(230,10,21,0.5)] transition-shadow hover:shadow-[0_0_30px_rgba(230,10,21,0.8)]">
+              <span class="truncate">Get Started</span>
+            </a>
+          </div>
+          <!-- Progress and Skip -->
+          <div class="mt-12 flex w-full max-w-lg flex-col items-center gap-6 px-4">
+            <div class="flex w-full items-center justify-between gap-4">
+              <div class="h-1 flex-1 rounded-full bg-white/10">
+                <div class="h-1 rounded-full bg-primary shadow-[0_0_8px_rgba(230,10,21,0.8)]" style="width: 25%;">
+                </div>
+              </div>
+            </div>
+            <a href="index.html"
+              class="cursor-pointer text-sm font-normal leading-normal text-white/50 underline transition-colors hover:text-white">Skip
+              Intro</a>
+          </div>
+        </div>
+      </div>
+      <footer class="relative flex flex-col p-5 text-center">
+        <p class="text-xs font-normal leading-normal text-white/40">© 2024 Blueberry. All Rights Reserved.</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

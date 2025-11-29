@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Blueberry Error/Empty State</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#e60a15",
+            "background-light": "#f8f5f6",
+            "background-dark": "#0A0A0A",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+          boxShadow: {
+            'glow-primary': '0 0 15px 5px rgba(230, 10, 21, 0.4)',
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="font-display">
+  <div
+    class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+    <div id="main-header"></div>
+    <main class="flex flex-1 items-center justify-center py-20 px-4">
+      <div class="flex flex-col items-center justify-center gap-8 text-center">
+        <div class="relative flex items-center justify-center">
+          <div class="absolute inset-0 rounded-full bg-primary/30 blur-2xl"></div>
+          <span class="material-symbols-outlined text-primary text-9xl shadow-glow-primary rounded-full">error</span>
+        </div>
+        <div class="flex max-w-lg flex-col items-center gap-4">
+          <h1 class="text-white text-4xl sm:text-5xl font-black tracking-tighter">Something Went Wrong</h1>
+          <p class="text-white/70 text-base sm:text-lg font-normal leading-relaxed">We couldn't find what you were looking for. Please try again or return to the homepage.</p>
+        </div>
+        <a href="index.html"
+          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-wide hover:bg-primary/80 transition-colors">
+          <span class="truncate">Go to Homepage</span>
+        </a>
+      </div>
+    </main>
+    <div id="main-footer"></div>
+  </div>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Blueberry - Profile</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#e60a15",
+            "background-light": "#f8f5f6",
+            "background-dark": "#121212",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+          boxShadow: {
+            'glow': '0 0 15px 0px rgba(230, 10, 21, 0.5)',
+            'glow-sm': '0 0 8px 0px rgba(230, 10, 21, 0.4)',
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="bg-background-dark font-display">
+  <div class="relative flex h-auto min-h-screen w-full flex-col bg-background-dark text-gray-200">
+    <div id="main-header"></div>
+    <main class="flex flex-1 justify-center px-4 py-8 sm:px-6 md:px-10 lg:px-20">
+      <div class="flex w-full max-w-7xl flex-col">
+        <!-- PageHeading -->
+        <div class="mb-8">
+          <p class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">Profile &amp; Settings</p>
+        </div>
+        <!-- ProfileHeader -->
+        <div class="mb-8 flex p-4 @container">
+          <div class="flex w-full flex-col gap-6 @[520px]:flex-row @[520px]:items-center @[520px]:justify-between">
+            <div class="flex items-center gap-6">
+              <div class="relative">
+                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-32"
+                  data-alt="User avatar placeholder"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDz8oy9H8xMvEPgnpQyub2CFqmuxPebMooedEsSi1B-OIX6qSyQZeuiiFxdIHO82I-pHg2cKMoVnxyaT0EJ9U9o58XtnuM-Vk4XhSELsFj8StXTa28kNmEGm-XwVIZUOqInPXmxYIi079MIaLtGG9ayssomyb3XPxArqa0crpOdXtt6vR7ixu94adCwjk8GDZOHzbT4iBKbPvJn9pd9AwCx6ySUwLtjfy8Tn9zSIMZcKxiY5KTM5pB5SHHQHezX4fTHKzNNYMOC6A1i");'>
+                </div>
+                <button
+                  class="absolute bottom-1 right-1 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white shadow-lg transition-transform hover:scale-110">
+                  <span class="material-symbols-outlined text-lg">edit</span>
+                </button>
+              </div>
+              <div class="flex flex-col justify-center">
+                <p class="text-white text-2xl font-bold leading-tight tracking-[-0.015em]">AlexUsername</p>
+                <p class="text-gray-400 text-base font-normal leading-normal">alex.user@email.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Tabs -->
+        <div class="mb-8 border-b border-white/10">
+          <div class="flex gap-2 sm:gap-8">
+            <a class="relative flex flex-col items-center justify-center px-4 py-4" href="#">
+              <p class="text-white text-sm font-bold leading-normal tracking-[0.015em]">Account Details</p>
+              <div class="absolute bottom-0 h-1 w-full rounded-t-lg bg-primary shadow-glow-sm"></div>
+            </a>
+            <a class="relative flex flex-col items-center justify-center px-4 py-4 text-gray-400 transition-colors hover:text-white"
+              href="#">
+              <p class="text-sm font-bold leading-normal tracking-[0.015em]">Subscription</p>
+            </a>
+            <a class="relative flex flex-col items-center justify-center px-4 py-4 text-gray-400 transition-colors hover:text-white"
+              href="#">
+              <p class="text-sm font-bold leading-normal tracking-[0.015em]">Preferences</p>
+            </a>
+            <a class="relative flex flex-col items-center justify-center px-4 py-4 text-gray-400 transition-colors hover:text-white"
+              href="#">
+              <p class="text-sm font-bold leading-normal tracking-[0.015em]">Notifications</p>
+            </a>
+          </div>
+        </div>
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-3">
+          <!-- Left Column: Settings Forms -->
+          <div class="space-y-10 lg:col-span-2">
+            <!-- Account Details Section -->
+            <section>
+              <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] mb-6">Account Details
+              </h2>
+              <div class="space-y-6">
+                <div class="relative">
+                  <label class="absolute -top-2 left-3 inline-block bg-background-dark px-1 text-xs font-medium text-gray-400"
+                    for="username">Username</label>
+                  <input
+                    class="block w-full rounded-lg border border-white/20 bg-transparent px-4 py-3 text-white placeholder-gray-500 transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary focus:ring-opacity-50 focus:shadow-glow-sm"
+                    id="username" type="text" value="AlexUsername" />
+                </div>
+                <div class="relative">
+                  <label class="absolute -top-2 left-3 inline-block bg-background-dark px-1 text-xs font-medium text-gray-400"
+                    for="email">Email Address</label>
+                  <input
+                    class="block w-full rounded-lg border border-white/20 bg-transparent px-4 py-3 text-white placeholder-gray-500 transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary focus:ring-opacity-50 focus:shadow-glow-sm"
+                    id="email" type="email" value="alex.user@email.com" />
+                </div>
+                <div>
+                  <button
+                    class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-transparent text-primary border border-primary text-sm font-bold leading-normal tracking-[0.015em] transition-all hover:bg-primary hover:text-white hover:shadow-glow-sm">
+                    <span class="truncate">Change Password</span>
+                  </button>
+                </div>
+              </div>
+            </section>
+          </div>
+          <!-- Right Column: Subscription Card -->
+          <div class="lg:col-span-1">
+            <div
+              class="rounded-xl border border-white/10 bg-white/5 p-6 shadow-lg backdrop-blur-sm transition-all hover:border-primary/50 hover:shadow-glow-sm">
+              <h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em] mb-4">Subscription Details
+              </h2>
+              <div class="space-y-4 text-gray-300">
+                <div class="flex justify-between">
+                  <span>Current Plan:</span>
+                  <span class="font-semibold text-white">Premium Monthly</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Next Billing Date:</span>
+                  <span class="font-semibold text-white">October 26, 2024</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span>Payment Method:</span>
+                  <span class="font-semibold text-white flex items-center gap-2">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                    </svg>
+                    •••• 4242
+                  </span>
+                </div>
+              </div>
+              <div class="mt-6 border-t border-white/10 pt-6">
+                <button
+                  class="flex w-full min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-4 bg-primary/20 text-primary border border-primary/50 text-sm font-bold leading-normal tracking-[0.015em] transition-all hover:bg-primary hover:text-white hover:shadow-glow-sm">
+                  <span class="truncate">Manage Subscription</span>
+                </button>
+                <a class="mt-4 block text-center text-sm text-gray-400 hover:text-primary hover:underline"
+                  href="#">Cancel Plan</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="main-footer"></div>
+  </div>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
